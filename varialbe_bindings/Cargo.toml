@@ -1,0 +1,6 @@
+[package]
+name = "varialbe_bindings"
+version = "0.1.0"
+authors = ["achernyak <artemchernyak@gmail.com>"]
+
+[dependencies]
