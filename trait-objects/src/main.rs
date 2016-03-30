@@ -15,10 +15,15 @@ fn do_something<T: Foo>(x: T) {
     x.method();
 }
 
+fn dynamic_something(x: &Foo) {
+    x.method();
+}
+
 fn main() {
     let x = 5u8;
     let y = "Hello".to_string();
 
+    dynamic_something(&x as &Foo);
     do_something(x);
     do_something(y);
 }
