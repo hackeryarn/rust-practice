@@ -2,7 +2,6 @@ trait Foo {
     fn method(&self) -> String;
 }
 
-
 impl Foo for u8 {
     fn method(&self) -> String { format!("u8: {}", *self) }
 }
@@ -17,6 +16,11 @@ fn do_something<T: Foo>(x: T) {
 
 fn dynamic_something(x: &Foo) {
     x.method();
+}
+
+pub struct TraitObject {
+    pub data: *mut (),
+    pub vtable: *mut(),
 }
 
 fn main() {
